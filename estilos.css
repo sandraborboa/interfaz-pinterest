@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+/*Estilos para el header*/
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98vw;
+    height: 80px;
+    font-size: 16px;
+    padding: 0px 16px;
+    position: fixed; /*la barra se queda fija aunque se scrollee*/
+    z-index: 1; /*evita que se amontonen los elementos*/
+    background-color: white;
+
+}
+
+header nav img#pinterest_icon{
+    width: 35px;
+    height: 32px;
+    padding: 4px;
+}
+
+/*efecto de hover*/
+header nav img#pinterest_icon:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
+}
+
+.first {
+    display: flex; /*caja flexible, hace que el contenido esté en horizonal por default*/
+
+}
+
+.first a {
+    text-decoration: none;
+    color: black;   
+}
+
+.first li{
+    list-style: none; /*quita los puntos de lista*/
+    padding: 0px 12px;
+
+}
+
+.first li #inicio{
+    display: flex;
+}
+
+.first li #inicio:hover{
+    color: #E1E1E1;
+    background-color: #000000;
+    padding: 8px 12px;
+    border-radius: 50px;
+}
+
+.first li #explorar{
+    display: flex;
+}
+
+.first li #explorar:hover{
+    color: #E1E1E1;
+    background-color: #000000;
+    padding: 8px 12px;
+    border-radius: 50px;
+}
+
+.first li #crear{
+    display: flex;
+}
+
+.first li #crear:hover{
+    color: #E1E1E1;
+    background-color: #000000;
+    padding: 8px 12px;
+    border-radius: 50px;
+}
+
+.search{
+    flex-grow: 1;
+    height: 48px;
+    background-color: #e9e9e9;
+    border-radius: 30px;
+}
+
+.search:hover{
+    background-color: #E1E1E1;
+}
+
+.search:focus-within{
+    border: 4px solid #7FC1FF;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+#lupa{
+    padding: 10px;
+    color: #767676;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.barra input{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 0px 8px 0px 0px;
+    font-size: 16px;
+    flex-grow: 1; /*hace que sea flexible según el tamaño entre los elementos*/
+
+}
+
+.right-items span{
+    padding: 8px;
+    color: #767676;
+    font-size: 28px;
+}
+
+.right-items span:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
+}
+
+
+/*Estilos para las cards*/
+
+.contenido{
+    position: absolute;
+    margin-top: 80px;
+}
+
+.imagenes{
+    columns: 6 240px;
+    margin: auto;
+}
+
+.imagenes .card-image{
+    position: relative;
+    padding: 6px;
+}
+
+.imagenes .card-image img{
+    border-radius: 15px;
+    min-width: 240px;
+    max-width: 240px;
+}
+
+.card-image:hover > :first-child{
+    filter: brightness(60%);
+}
+
+.card-image:hover > *{
+    visibility: visible;
+    display: inline;
+
+}
+
+.button {
+    position: absolute;
+    left: 60%;
+    top: 5%;
+    padding: 13px 15px;
+    background-color: #E60023;
+    border-radius: 30px;
+    border: none;
+    visibility: hidden;
+    display: none;
+}
+
+.imagenes .card-image button a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.oculto-1{
+    position: absolute;
+    left: 58%;
+    bottom: 10%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
+
+.oculto-2{
+    position: absolute;
+    left: 78%;
+    bottom: 10%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
